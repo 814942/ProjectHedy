@@ -20,7 +20,7 @@ const OrderSummary = ({ subtotal, shipping, total }: IOrderSummary) => {
         <div className="flex flex-col gap-y-1">
           <div className="flex items-center justify-between">
             <span>Shipping</span>
-            <span>$ {shipping.price}</span>
+            <span>$ {shipping?.price ? shipping.price : 0}</span>
           </div>
         </div>
         <div className="h-px w-full border-b border-gray-200 border-dashed my-4" />

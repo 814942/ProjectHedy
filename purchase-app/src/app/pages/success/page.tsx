@@ -1,8 +1,8 @@
 "use client"
 import { useDataContext } from "@/context/data.context";
 import { IProductData } from "@/interfaces/data.interfaces";
-import OrderSummary from "./OrderSummary";
-import ShippingDetails from "./ShippingDetails";
+import OrderSummary from "../../../components/molecules/OrderSummary";
+import ShippingDetails from "../../../components/molecules/ShippingDetails";
 import ProductOrder from "@/components/molecules/ProductOrder";
 
 const Success = () => {
@@ -23,14 +23,14 @@ const Success = () => {
                 Summary
               </h2>
             </div>
-            {orderPlaced?.products.map((product: IProductData) => {
+            {orderPlaced?.products?.map((product: IProductData) => {
               return (
                 <ProductOrder
                   key={product.id}
                   image={product.thumbnail}
                   title={product.title}
                   brand={product.brand}
-                  price={product.price}
+                  price={product.price ? product.price : 0}
                   quantity={product.quantity!}
                 />
               )

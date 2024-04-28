@@ -46,7 +46,7 @@ const ShippingDetails = ({
         <div className="flex flex-col w-1/3" data-testid="shipping-method-summary">
           <p className="txt-medium-plus text-ui-fg-base mb-1 font-semibold">Method</p>
           <p className="txt-medium text-ui-fg-subtle">
-            {shipping.name} (${shipping.price})
+            {shipping?.name ? shipping.name : "N/A"} (${shipping?.price ? shipping.price : 0})
           </p>
         </div>
       </div>

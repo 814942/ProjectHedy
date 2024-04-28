@@ -4,12 +4,12 @@ interface IProductOrderProps {
   image: string
   title: string
   brand: string
-  price: number
+  price?: number
   quantity: number
 }
 
-const ProductOrder = ({ title, image, brand, price, quantity }: IProductOrderProps) => {
-  return ( 
+const ProductOrder = ({ title, image, brand, price=0, quantity }: IProductOrderProps) => {
+  return (
     <div>
       <div className="flex items-center gap-4 mt-8">
         <div className="relative w-28 h-28 rounded-md overflow-hidden">
@@ -27,7 +27,7 @@ const ProductOrder = ({ title, image, brand, price, quantity }: IProductOrderPro
             <span className="float-right">{brand}</span>
           </p>
           <p className="flex justify-between">Price {" "}
-            <span className="float-right">${price ? price : "N/A"}</span>
+            <span className="float-right">${price}</span>
           </p>
           <p className="flex justify-between">Quantity {" "}
             <span className="float-right">{quantity}</span>
