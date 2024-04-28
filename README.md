@@ -1,2 +1,2 @@
 # Proyecto
-Proyecto Hedy grupal React - Next.Js
+Proyecto Hedy grupal
