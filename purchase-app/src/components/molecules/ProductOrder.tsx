@@ -27,7 +27,7 @@ const ProductOrder = ({ title, image, brand, price, quantity }: IProductOrderPro
             <span className="float-right">{brand}</span>
           </p>
           <p className="flex justify-between">Price {" "}
-            <span className="float-right">${price}</span>
+            <span className="float-right">${price ? price : "N/A"}</span>
           </p>
           <p className="flex justify-between">Quantity {" "}
             <span className="float-right">{quantity}</span>
